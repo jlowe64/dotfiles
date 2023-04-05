@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 HISTSIZE=99999
 HISTFILESIZE=999999
 SAVEHIST=$HISTSIZE
