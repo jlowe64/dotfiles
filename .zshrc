@@ -17,3 +17,5 @@ then
   autoload -Uz compinit
   compinit
 fi
+
+HOMEBREW_CASK_OPTS=--appdir=/Applications
