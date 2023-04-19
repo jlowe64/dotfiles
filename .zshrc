@@ -1,6 +1,9 @@
+autoload -U +X compinit && compinit
+
 HISTSIZE=99999
 HISTFILESIZE=999999
 SAVEHIST=$HISTSIZE
+
 alias history="history 1"
 
 eval "$(direnv hook zsh)"
