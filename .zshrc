@@ -22,3 +22,5 @@ then
 fi
 
 HOMEBREW_CASK_OPTS=--appdir=/Applications
+
+alias brew="arch -x86_64 brew"
