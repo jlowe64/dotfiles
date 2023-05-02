@@ -4,8 +4,6 @@ HISTSIZE=99999
 HISTFILESIZE=999999
 SAVEHIST=$HISTSIZE
 
-alias history="history 1"
-
 eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 
@@ -24,3 +22,4 @@ fi
 HOMEBREW_CASK_OPTS=--appdir=/Applications
 
 alias brew="arch -x86_64 brew"
+alias history="history 1"
