@@ -4,6 +4,22 @@ HISTSIZE=99999
 HISTFILESIZE=999999
 SAVEHIST=$HISTSIZE
 
+# BREW
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+HOMEBREW_CASK_OPTS=--appdir=/Applications
+
+# ALIASES
+alias history="history 1"
+
+# HOOKS
+eval "$(starship init zsh)"
 eval "$(direnv hook zsh)"
 source <(kubectl completion zsh)
 
@@ -18,18 +34,3 @@ export AWS_VAULT_KEYCHAIN_NAME=login
 
 # default is 1h, which is awkward
 export AWS_SESSION_TOKEN_TTL=12h
-
-# BREW
-if type brew &>/dev/null
-then
-  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-  autoload -Uz compinit
-  compinit
-fi
-
-HOMEBREW_CASK_OPTS=--appdir=/Applications
-
-# ALIASES
-alias brew="arch -x86_64 brew"
-alias history="history 1"
